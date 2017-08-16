@@ -1,0 +1,34 @@
+<Page ux:Class="SplashPage">
+	<Router ux:Dependency="router" />
+	<DockPanel ClipToBounds="true">
+
+		<JavaScript>
+			module.exports = {
+				gologin: function() { router.push("loginpage");}
+			}
+		</JavaScript>
+
+		<!-- Video -->
+		<Video Layer="Background" File="../Assets/Movies/sample.mp4" Opacity="1" AutoPlay="true" IsLooping="true" StretchMode="UniformToFill"> 
+			<Blur Radius="0" />
+		</Video>
+
+		<Grid RowCount="2">
+			<!-- Logo -->
+			<StackPanel Alignment="VerticalCenter">
+				<Text Font="MyFont" Color="White" Alignment="HorizontalCenter" FontSize="50">Splash Page</Text>
+			</StackPanel>
+
+			<!-- Get Started Button -->
+			<Panel Margin="10" Padding="10" Height="40" Clicked="{gologin}">
+				<Rectangle Layer="Background" Color="#125F63" CornerRadius="4">
+					<DropShadow Angle="90" Distance="1" Spread="2" Color="#00000060" />
+				</Rectangle>
+				<Text Value="시작하기" FontSize="16" Color="White" Alignment="Center" />
+				<WhilePressed>
+					<Scale Factor=".95" Duration=".08" Easing="QuadraticOut" />
+				</WhilePressed>
+			</Panel>
+		</Grid>
+	</DockPanel>
+</Page>

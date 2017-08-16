@@ -1,0 +1,97 @@
+<App>
+	<!-- Panel -->
+	<Panel Margin="10" Padding="20" Color="#444">
+		<Rectangle Color="#000" Width="70px" Height="70px" />
+		<Rectangle Color="#eee" Width="70" Height="70" />
+		<Rectangle Color="#4bedea" Height="70%" Width="50%" />
+		<Rectangle Color="#eee" />
+	</Panel>
+
+	<!-- StackPanel -->
+	<!-- <StackPanel ItemSpacing="20" Orientation="Vertical" Padding="20">
+		<Panel Width="100" Height="100" Background="Red" />
+		<Panel Width="100" Height="100" Background="Green" />
+		<Panel Width="100" Height="100" Background="Blue" />
+	</StackPanel> -->
+
+	<!-- DockPanel -->
+	<!-- <DockPanel> 
+		<Rectangle Dock="Left" Width="100" Color="Red" />
+		<Rectangle Dock="Top" Height="100" Color="Green" />
+		<Rectangle Dock="Right" Width="100" Color="Blue" />
+		<Rectangle Dock="Bottom" Height="100" Color="Teal" />
+		<Rectangle Color="Yellow" />
+	</DockPanel> -->
+
+	<!-- Grid RowCount, ColumnCount-->
+	<!-- <Grid RowCount="2" ColumnCount="3" CellSpacing="10" ChildOrder="ColumnMajor">
+		<Rectangle Color="Red" />
+		<Rectangle Color="Green" />
+		<Rectangle Color="Blue" />
+		<Rectangle Color="Yellow" />
+		<Rectangle Color="Black" />
+		<Rectangle Color="Teal" />
+	</Grid> -->
+
+	<!-- Grid Rows, Columns, Row, Column -->
+	<!-- <Grid Rows="1*, 2*" Columns="1*, 1*, 2*" CellSpacing="10">
+		<Rectangle Color="Red" Row="1" Column="0" /> 
+		<Rectangle Color="Green" Row="1" Column="1" />
+		<Rectangle Color="Blue" Row="1" Column="2" />
+		<Rectangle Color="Yellow" Row="0" Column="0" />
+		<Rectangle Color="Black" Row="0" Column="1" />
+		<Rectangle Color="Teal" Row="0" Column="2" />
+	</Grid> -->
+
+	<!-- Grid RowSpan, ColumnSpan-->
+	<!-- <Grid Rows="1*, 2*" Columns="1*, 1*, 2*" CellSpacing="10">
+		<Rectangle Color="Red" RowSpan="2"/> 
+		<Rectangle Color="Green" ColumnSpan="2" />
+		<Rectangle Color="Black" />
+		<Rectangle Color="Teal" />
+	</Grid> -->
+
+	<!-- WrapPanel -->
+	<!-- <Rectangle ux:Class="MyRec" Width="100" Height="100">
+		<string ux:Property="TextValue" />
+		<Text Alignment="Center" TextColor="White" FontSize="50" Value="{Property TextValue}" />
+	</Rectangle>
+	
+	<WrapPanel FlowDirection="RightToLeft" Orientation="Vertical">
+		<MyRec TextValue="1" Color="#112233" />
+		<MyRec TextValue="2" Color="#112233" />
+		<MyRec TextValue="3" Color="#112233" />
+		<MyRec TextValue="4" Color="#112233" />
+		<MyRec TextValue="5" Color="#112233" />
+		<MyRec TextValue="6" Color="#112233" />
+		<MyRec TextValue="7" Color="#112233" />
+		<MyRec TextValue="8" Color="#112233" />
+		<MyRec TextValue="9" Color="#112233" />
+		<MyRec TextValue="10" Color="#112233" />
+	</WrapPanel> -->
+
+	<!-- ColumnLayout -->
+	<!-- <Panel>
+		<ColumnLayout Orientation="Vertical" ColumnCount="3" />
+		<Each Count="9">
+			<Circle Height="50" Width="50" Margin="5" Color="Blue" />
+		</Each>
+	</Panel> -->
+
+	<!-- CicleLayout -->
+	<!-- <Panel Color="#000000" Width="300" Height="300">
+	    <CircleLayout ItemSpacingDegrees="0" StartAngleDegrees="0" Radius="1" />
+	    <Circle Width="50" Height="50" Fill="#ff00ff" />
+	    <Circle Width="50" Height="50" Fill="#7f7fff" />
+	    <Circle Width="50" Height="50" Fill="#00ffff" />
+	    <Circle Width="50" Height="50" Fill="#7fff7f" />
+	    <Circle Width="50" Height="50" Fill="#ffff00" />
+	    <Circle Width="50" Height="50" Fill="#ff7f7f" />
+	    <Circle Width="50" Height="50" Fill="#ff7f7f" />
+	    <Circle Width="50" Height="50" Fill="#ff7f7f" />
+	    <Circle Width="50" Height="50" Fill="#ff7f7f" />
+	    <Circle Width="50" Height="50" Fill="#ff7f7f" />
+	</Panel> -->
+
+
+</App>

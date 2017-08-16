@@ -1,0 +1,44 @@
+<Page ux:Class="MainPage">
+	<Router ux:Dependency="router" />
+
+	<JavaScript>
+		module.exports = {
+			gologin: function() { router.push("loginpage");},
+			gosub: function() { router.push("subpage");}
+		}
+	</JavaScript>
+
+	<DockPanel>
+		<Grid RowCount="2">
+			<!-- Page Title -->
+			<StackPanel Alignment="VerticalCenter">
+				<Text Font="MyFont" Color="White" Alignment="HorizontalCenter" FontSize="50">Main Page</Text>
+			</StackPanel>
+
+			<!-- Button -->
+			<StackPanel Orientation="Horizontal" ContentAlignment="Center">
+				<!-- Logout Button -->
+				<Panel Margin="10" Padding="10" Height="40" Clicked="{gologin}">
+					<Rectangle Layer="Background" Color="#125F63" CornerRadius="4">
+						<DropShadow Angle="90" Distance="1" Spread="2" Color="#00000060" />
+					</Rectangle>
+					<Text Value="로그아웃" FontSize="16" Color="White" Alignment="Center" />
+					<WhilePressed>
+						<Scale Factor=".95" Duration=".08" Easing="QuadraticOut" />
+					</WhilePressed>
+				</Panel>
+
+				<!-- Go Subpage Button -->
+				<Panel Margin="10" Padding="10" Height="40" Clicked="{gosub}">
+					<Rectangle Layer="Background" Color="#125F63" CornerRadius="4">
+						<DropShadow Angle="90" Distance="1" Spread="2" Color="#00000060" />
+					</Rectangle>
+					<Text Value="Go Subpage" FontSize="16" Color="White" Alignment="Center" />
+					<WhilePressed>
+						<Scale Factor=".95" Duration=".08" Easing="QuadraticOut" />
+					</WhilePressed>
+				</Panel>
+			</StackPanel>
+		</Grid>
+	</DockPanel>
+</Page>

@@ -1,0 +1,85 @@
+<App>
+	<DockPanel>
+
+	<Rectangle ux:Name="rect" X="50%" Y="30%" Width="100" Height="100" Fill="#f93" CornerRadius="0">
+		<Text ux:Name="Anim" Value="Anim" Color="#fff" Alignment="Center" FontSize="30" TextWrapping="Wrap" />
+	</Rectangle>
+
+	<ScrollView>
+		<StackPanel>
+			<Panel Background="#06F">
+				<Text Value="Transform" Color="#fff" Margin="10" />
+			</Panel>
+			<StackPanel Padding="20" Alignment="Left">
+				<Basic.Button Text="Rotate">
+					<Clicked>
+						<Rotate Target="rect" Degrees="90" Duration="0.5" Easing="QuadraticInOut" EasingBack="QuadraticInOut" />
+						<Change Anim.Value="Rotate" Duration="0.5" />
+					</Clicked>
+				</Basic.Button>
+				<Basic.Button Text="Scale">
+					<Clicked>
+						<Scale Target="rect" Factor="0.2" Duration="0.5" Easing="CircularIn" EasingBack="CircularIn" />
+						<Change Anim.Value="Scale" Duration="0.5" />
+					</Clicked>
+				</Basic.Button>
+				<Basic.Button Text="Move">
+					<Clicked>
+						<Move Target="rect" Y="1.5" RelativeTo="Size" Duration="0.5" Easing="ElasticIn" EasingBack="ElasticIn" />
+						<Change Anim.Value="Move" Duration="1" />
+					</Clicked>
+				</Basic.Button>
+				<Basic.Button Text="Skew">
+					<Clicked>
+						<Skew Target="rect" DegreesX="30" Duration="0.5" Easing="QuinticIn" EasingBack="QuinticOut" />
+						<Change Anim.Value="Skew" Duration="0.5" />
+					</Clicked>
+				</Basic.Button>
+				<Basic.Button Text="Spin">
+					<Clicked>
+						<Spin Target="rect" Frequency="2" Duration="0.5" />
+						<Change Anim.Value="Spin" Duration="0.5" />
+					</Clicked>
+				</Basic.Button>
+			</StackPanel>
+			<Panel Background="#06F">
+				<Text Value="Others" Color="#fff" Margin="10" />
+			</Panel>
+			<StackPanel Padding="20" Alignment="Left">
+				<Basic.Button Text="Color">
+					<Clicked>
+						<Change rect.Color="#f07" Duration="0.5" />
+						<Change Anim.Value="Color" Duration="0.5" />
+					</Clicked>
+				</Basic.Button>
+				<Basic.Button Text="Opacity">
+					<Clicked>
+						<Change rect.Opacity="0.1" Duration="0.5" />
+						<Change Anim.Value="Opacity" Duration="0.5" />
+					</Clicked>
+				</Basic.Button>
+				<Basic.Button Text="CornerRadius">
+					<Clicked>
+						<Change rect.CornerRadius="30" Duration="0.5" />
+						<Change Anim.Value="CornerRadius" Duration="0.5" />
+					</Clicked>
+				</Basic.Button>
+
+				<Basic.Button Text="Complex">
+					<WhilePressed>
+						<Rotate Target="rect" Degrees="90" Duration="0.5" />
+						<Scale Target="rect" Factor="2" Duration="0.5" />
+						<Move Target="rect" Y="1.5" RelativeTo="Size" Duration="0.5" />
+						<Skew Target="rect" DegreesX="30" Duration="0.5" />
+						<!-- <Spin Target="rect" Frequency="2" Duration="0.5" /> -->
+						<Change rect.Color="#f07" Duration="0.5" />
+						<Change rect.Opacity="0.1" Duration="0.5" />
+						<Change rect.CornerRadius="30" Duration="0.5" />
+						<Change Anim.Value="Complex" Duration="0.5" />
+					</WhilePressed>
+				</Basic.Button>
+			</StackPanel>
+		</StackPanel>
+	</ScrollView>
+</DockPanel>
+</App>

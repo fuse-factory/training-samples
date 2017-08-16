@@ -1,0 +1,29 @@
+<Page ux:Class="SubPage">
+	<Router ux:Dependency="router" />
+
+	<JavaScript>
+		module.exports = {
+			gomain: function() { router.goBack();}
+		}
+	</JavaScript>
+
+	<DockPanel>
+		<Grid RowCount="2">
+			<!-- Page Title -->
+			<StackPanel Alignment="VerticalCenter">
+				<Text Font="MyFont" Color="White" Alignment="HorizontalCenter" FontSize="50">Sub Page</Text>
+			</StackPanel>
+
+			<!-- Go Mainpage Button -->
+			<Panel Margin="10" Padding="10" Height="40" Clicked="{gomain}">
+				<Rectangle Layer="Background" Color="#125F63" CornerRadius="4">
+					<DropShadow Angle="90" Distance="1" Spread="2" Color="#00000060" />
+				</Rectangle>
+				<Text Value="Go Mainpage" FontSize="16" Color="White" Alignment="Center" />
+				<WhilePressed>
+					<Scale Factor=".95" Duration=".08" Easing="QuadraticOut" />
+				</WhilePressed>
+			</Panel>
+		</Grid>
+	</DockPanel>
+</Page>

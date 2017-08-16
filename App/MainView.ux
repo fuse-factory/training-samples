@@ -1,0 +1,6 @@
+<App>
+	<StackPanel Orientation="Vertical">
+		<Text Value="Hello Fuse" />
+		<Text Value="World!!" />
+	</StackPanel>
+</App>

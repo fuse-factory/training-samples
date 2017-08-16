@@ -1,0 +1,40 @@
+<App>
+	 <StackPanel ItemSpacing="10" Alignment="Center">
+		
+		<!-- 1. Rectangle Styling -->
+		<Rectangle Width="200" Height="100" Color="#46E3D6" />
+		
+		<Rectangle Width="200" Height="100">
+			 <SolidColor Color="#46E3D6" />
+			 <Stroke Color="#6DBFD2" Width="2" />
+			 <Shadow Color="#0003" Distance="10" Angle="130" />
+		</Rectangle>
+
+		<!-- 2. Assets -->
+		<!-- <Panel>
+			<Image File="Assets/Images/Icon-76.png" />
+		</Panel> -->
+
+		<!-- 3. Multi Density Images -->
+		<!-- <Image>
+			<MultiDensityImageSource>
+				<FileImageSource Density="1" File="Assets/Images/Icon-76.png" />
+				<FileImageSource Density="2" File="Assets/Images/Icon-76@2x.png" />
+			</MultiDensityImageSource>
+		</Image> -->
+
+		<!-- 4. Text Styling -->
+		<!-- <Font File="Assets/Fonts/Comic Sans Ms.ttf" ux:Global="MyFont" />
+		<Text FontSize="30" Value="Default Font" />
+		<Text Font="MyFont" FontSize="30" Value="Comic Sans Ms Font" /> -->
+
+		<!--Color Palettes -->
+		<!-- <Font File="Assets/Fonts/Comic Sans Ms.ttf" ux:Global="MyFont" />
+		<float4 ux:Global="MyFavColor" ux:Value="#8A5182" />
+		<float4 ux:Global="MyFavColor2" ux:Value="#207ce5" />
+		
+		<Text FontSize="30" Value="Default Font" Color="MyFavColor" />
+		<Text Font="MyFont" FontSize="30" Value="Comic Sans Ms Font" Color="MyFavColor2" /> -->
+
+	</StackPanel>
+</App>

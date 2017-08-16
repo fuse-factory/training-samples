@@ -1,0 +1,26 @@
+<App>
+	<JavaScript>
+    module.exports = {
+        gotoFirst: function() { router.push("Page1"); },
+        gotoSecond: function() { router.push("Page2"); }
+    };
+	</JavaScript>
+
+	<Router ux:Name="router" />
+
+	<DockPanel>
+	    <Navigator DefaultPath="Page1">
+	        <Page ux:Template="Page1" Background="Red">
+	            <Text Alignment="Center" Color="White">Page1</Text>
+	        </Page>
+	        <Page ux:Template="Page2" Background="Blue">
+	            <Text Alignment="Center" Color="White">Page2</Text>
+	        </Page>
+	    </Navigator>
+
+	    <Grid Dock="Bottom" Columns="1*,1*">
+	        <Basic.Button Text="First page" Clicked="{gotoFirst}" />
+	        <Basic.Button Text="Second page" Clicked="{gotoSecond}" />
+	    </Grid>
+	</DockPanel>
+</App>

@@ -1,0 +1,108 @@
+<App>
+	<DockPanel>
+
+		<Panel ux:Class="myPanel" Color="#caf2f7" Padding="5" Height="70%">
+			<Panel Color="#4bed86" Padding="5" Alignment="{ReadProperty myAlignment}">
+				<string ux:Property="myAlignment" />
+				<Rectangle ux:Name="rec" Width="100" Height="100" Color="#ef73aa" CornerRadius="5">
+					<Text Value="{ReadProperty myAlignment}" Alignment="Center" Color="#FFF" />
+				</Rectangle>
+			</Panel>
+		</Panel>
+
+		<myPanel ux:Name="myPanel2" Dock="Top" myAlignment="Default" />
+
+		<Panel ux:Class="BottomButton" Width="100%" Height="40" TextSize="12">
+			<string ux:Property="TextValue" />
+			<float ux:Property="TextSize" />
+			<Rectangle Layer="Background" Color="#4ba1ed" CornerRadius="4" />
+			<Text Value="{ReadProperty TextValue}" FontSize="{ReadProperty TextSize}" Color="#FFF" Alignment="Center" />
+		</Panel>
+		<StackPanel Dock="Bottom" Height="30%">
+			<Panel>
+				<Grid ColumnCount="4" CellSpacing="5" Padding="2">
+					<BottomButton TextValue="Default">
+						<Clicked>
+							<Set myPanel2.myAlignment="Default" />
+						</Clicked>
+					</BottomButton>
+					<BottomButton TextValue="Left">
+						<Clicked>
+							<Set myPanel2.myAlignment="Left" />
+						</Clicked>
+					</BottomButton>
+					<BottomButton TextValue="HorizontalCenter" TextSize="11">
+						<Clicked>
+							<Set myPanel2.myAlignment="HorizontalCenter" />
+						</Clicked>
+					</BottomButton>
+					<BottomButton TextValue="Right">
+						<Clicked>
+							<Set myPanel2.myAlignment="Right" />
+						</Clicked>
+					</BottomButton>
+					<BottomButton TextValue="Top">
+						<Clicked>
+							<Set myPanel2.myAlignment="Top" />
+						</Clicked>
+					</BottomButton>
+					<BottomButton TextValue="VerticalCenter">
+						<Clicked>
+							<Set myPanel2.myAlignment="VerticalCenter" />
+						</Clicked>
+					</BottomButton>
+					<BottomButton TextValue="Bottom">
+						<Clicked>
+							<Set myPanel2.myAlignment="Bottom" />
+						</Clicked>
+					</BottomButton>
+					<BottomButton TextValue="TopLeft">
+						<Clicked>
+							<Set myPanel2.myAlignment="TopLeft" />
+						</Clicked>
+					</BottomButton>
+					<BottomButton TextValue="TopCenter">
+						<Clicked>
+							<Set myPanel2.myAlignment="TopCenter" />
+						</Clicked>
+					</BottomButton>
+					<BottomButton TextValue="TopRight">
+						<Clicked>
+							<Set myPanel2.myAlignment="TopRight" />
+						</Clicked>
+					</BottomButton>
+					<BottomButton TextValue="CenterLeft">
+						<Clicked>
+							<Set myPanel2.myAlignment="CenterLeft" />
+						</Clicked>
+					</BottomButton>
+					<BottomButton TextValue="Center">
+						<Clicked>
+							<Set myPanel2.myAlignment="Center" />
+						</Clicked>
+					</BottomButton>
+					<BottomButton TextValue="CenterRight">
+						<Clicked>
+							<Set myPanel2.myAlignment="CenterRight" />
+						</Clicked>
+					</BottomButton>
+					<BottomButton TextValue="BottomLeft">
+						<Clicked>
+							<Set myPanel2.myAlignment="BottomLeft" />
+						</Clicked>
+					</BottomButton>
+					<BottomButton TextValue="BottomCenter">
+						<Clicked>
+							<Set myPanel2.myAlignment="BottomCenter" />
+						</Clicked>
+					</BottomButton>
+					<BottomButton TextValue="BottomRight">
+						<Clicked>
+							<Set myPanel2.myAlignment="BottomRight" />
+						</Clicked>
+					</BottomButton>
+				</Grid>
+			</Panel>
+		</StackPanel>
+	</DockPanel>
+</App>

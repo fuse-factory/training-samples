@@ -1,0 +1,16 @@
+<App>
+	<PageControl ux:Name="pagecontrol" Active="Page1">
+	    <Page ux:Name="Page1" Background="Red">
+	    	<Text Value="Page1" Color="White" Alignment="Center" />
+	    	<Clicked>
+	    		<Set pagecontrol.Active="Page2" />
+	    	</Clicked>
+	    </Page>
+	    <Page ux:Name="Page2" Background="Blue">
+	    	<Text Value="Page2" Color="White" Alignment="Center"  />
+	    	<Clicked>
+	    		<Set pagecontrol.Active="Page1" />
+	    	</Clicked>
+	    </Page>
+	</PageControl>
+</App>
