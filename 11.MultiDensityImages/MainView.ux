@@ -1,0 +1,87 @@
+<App>
+	<JavaScript>
+		window.setInterval(function(){
+	        router.goto("loginPage");
+	    }, 3000);
+	</JavaScript>
+
+	<Font File="assets/Nanum Pen Script.ttf" ux:Global="NanumPen" />
+	<Font File="assets/NanumGothic Bold.ttf" ux:Global="NanumGothicBold" />
+	<Font File="assets/NanumGothic.ttf" ux:Global="NanumGothic" />
+	<Image ux:Class="intro_page.Show_Shop_icon">
+		<MultiDensityImageSource>
+			<FileImageSource File="assets/intro_page.Show_Shop_icon@1x.png" Density="1" />
+			<FileImageSource File="assets/intro_page.Show_Shop_icon@2x.png" Density="2" />
+		</MultiDensityImageSource>
+	</Image>
+
+	<Image ux:Class="login_page.logo">
+		<MultiDensityImageSource>
+			<FileImageSource File="assets/login_page.logo@1x.png" Density="1" />
+			<FileImageSource File="assets/login_page.logo@2x.png" Density="2" />
+		</MultiDensityImageSource>
+	</Image>
+
+	<Image ux:Class="login_page.bar">
+		<MultiDensityImageSource>
+			<FileImageSource File="assets/login_page.bar@1x.png" Density="1" />
+			<FileImageSource File="assets/login_page.bar@2x.png" Density="2" />
+		</MultiDensityImageSource>
+	</Image>
+
+	<Image ux:Class="login_page.login_button">
+		<MultiDensityImageSource>
+			<FileImageSource File="assets/login_page.login_button@1x.png" Density="1" />
+			<FileImageSource File="assets/login_page.login_button@2x.png" Density="2" />
+		</MultiDensityImageSource>
+	</Image>
+
+	<Router ux:Name="router" />
+
+	<!-- <PageControl> -->
+	<Navigator DefaultPath="splashPage">
+		<Page ux:Template="splashPage">
+			<StackPanel Alignment="VerticalCenter" Width="100%" Height="100%">
+				<intro_page.Show_Shop_icon Width="81" Height="127" />
+				<Text Font="NanumPen" FontSize="25" TextColor="#4A494A" TextAlignment="Center" Value="Show Shop" />
+			</StackPanel>
+		</Page>
+
+		<Page ux:Template="loginPage">
+			
+			<!-- <Grid Rows="3*,1*,1*,1*" Height="100%"> -->
+			<DockPanel>
+				<StackPanel Height="50%" Orientation="Horizontal" Alignment="HorizontalCenter" ItemSpacing="10" Dock="Top">
+					<login_page.logo Width="45" Height="71" />
+					<Text Font="NanumPen" FontSize="25" TextColor="#4A494A" TextAlignment="Center" Value="Show Shop" Alignment="Center" />
+				</StackPanel>
+				
+				<StackPanel Height="150" ItemSpacing="20" Dock="Top" Padding="0,0,0,0" Width="100%">
+					<StackPanel Padding="30,0,30,0" Orientation="Vertical" Alignment="Left" ItemSpacing="10" Width="100%">
+						<Text Font="NanumGothicBold" FontSize="14" TextColor="#4A494A" Value="아이디" Margin="10, 0, 10, 0" />
+						<!-- <login_page.bar Width="100%" Height="1" /> -->
+						<Rectangle Fill="#000" Height="1px" SnapToPixels="true" Width="100%" />
+					</StackPanel>
+
+					<StackPanel Padding="30,0,30,0" Orientation="Vertical" Alignment="Left" ItemSpacing="10" Width="100%">
+						<Text Font="NanumGothicBold" FontSize="14" TextColor="#4A494A" Value="패스워드" Margin="10, 0, 10, 0" />
+						<!-- <login_page.bar Width="100%" Height="1" /> -->
+						<Rectangle Fill="#000" Height="1px" SnapToPixels="true" Width="100%" />
+					</StackPanel>
+				</StackPanel>
+
+				<Panel Width="135" Height="33" Dock="Top">
+					<Text Font="NanumGothicBold" FontSize="16" TextColor="#FFFEFE" Value="로그인" Alignment="Center" TextAlignment="Center" />
+					<login_page.login_button Width="135" Height="33" />
+				</Panel>
+
+				<DockPanel Width="100%" Height="100%" Padding="30,30,50,0" Dock="Top">
+					<Text Font="NanumGothic" FontSize="12" TextColor="#4A494A" Value="아이디, 비밀번호 찾기" Dock="Left" />
+					<Text Font="NanumGothic" FontSize="12" TextColor="#4A494A" Value="회원가입 하기" Dock="Right" />
+				</DockPanel>
+			<!-- </Grid> -->
+			</DockPanel>
+		</Page>
+	<!-- </PageControl> -->
+	</Navigator>
+</App>

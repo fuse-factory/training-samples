@@ -1,0 +1,21 @@
+<App>
+    <StackPanel ItemSpacing="10">
+        <Rectangle ux:Class="MyRect" Color="#f0a">
+            <Text Value="사각형" Margin="10" />
+        </Rectangle>
+
+		<MyRect />
+		<MyRect />
+		<MyRect />
+
+        <Rectangle ux:Class="MyColorRect" Color="Black">
+            <float4 ux:Property="TextColor" />
+            <Text Value="사각형" Margin="10" Color="{Property TextColor}" />
+        </Rectangle>
+
+        <MyColorRect TextColor="Gray" />
+        <MyColorRect TextColor="Blue" />
+
+    </StackPanel>
+</App>
+

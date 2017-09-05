@@ -1,0 +1,45 @@
+<ExportedViews>
+        <DockPanel ux:Template="AnimatedPanel" Margin="0,0" Background="#eee">
+            <JavaScript>
+                var Observable = require("FuseJS/Observable");
+                var items = Observable();
+
+                function addItem() {
+                    items.add({ text: "이것은 Fuse 목록 입니다." });
+                }
+
+                function removeItem(sender) {
+                    items.remove(sender.data);
+                }
+
+                module.exports = {
+                    items: items,
+                    addItem: addItem,
+                    removeItem: removeItem
+                };
+            </JavaScript>
+            <Basic.Button Text="추 가" Clicked="{addItem}" Dock="Top" />
+            <ScrollView>
+                <StackPanel>
+                    <Each Items="{items}">
+                        <DockPanel Padding="10" Margin="0,1" Background="#fff">
+                            <Text Value="{text}" Alignment="CenterLeft" />
+                            <Basic.Button Text="삭 제" Clicked="{removeItem}" Dock="Right" />
+
+                            <LayoutAnimation>
+                                <Move RelativeTo="LayoutChange" Y="1" Duration="0.8" Easing="ElasticIn" />
+                            </LayoutAnimation>
+
+                            <AddingAnimation>
+                                <Move RelativeTo="Size" X="1" Duration="0.3" Easing="CircularIn" />
+                            </AddingAnimation>
+
+                            <RemovingAnimation>
+                                <Move RelativeTo="Size" X="-1" Duration="0.4" Easing="CircularOut" />
+                            </RemovingAnimation>
+                        </DockPanel>
+                    </Each>
+                </StackPanel>
+            </ScrollView>
+        </DockPanel>
+</ExportedViews>

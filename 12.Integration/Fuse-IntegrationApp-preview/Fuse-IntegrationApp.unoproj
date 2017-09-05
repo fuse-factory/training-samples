@@ -1,0 +1,12 @@
+{
+  "RootNamespace":"",
+  "Packages": [
+    "Fuse",
+    "Fuse.BasicTheme",
+    "FuseJS",
+    "Fuse.Views"
+  ],
+  "Includes": [
+    "*"
+  ]
+}
