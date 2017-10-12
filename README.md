@@ -3,5 +3,5 @@
 
 ## 다운로드
 
-* [압축 파일](https://github.com/fuse-factory/training-samples/archive/honam-univ.zip)
-* [강의 자료 (PDF)](https://github.com/fuse-factory/training-samples/blob/honam-univ/Fuse-Training-for-honamUiv.pdf)
+* [압축 파일](https://github.com/fuse-factory/training-samples/archive/gnu.zip)
+* [강의 자료 (PDF)](https://github.com/fuse-factory/training-samples/blob/gnu/Fuse-Training-for-honamUiv.pdf)
