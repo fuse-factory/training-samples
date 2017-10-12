@@ -1,0 +1,76 @@
+<Panel ux:Class="MyPageControl">
+	<Rectangle ux:Name="rect" Width="80%" Height="5" Alignment="Bottom" LayoutMaster="menu1">
+		<Stroke Width="3" Color="Purple" />
+		<LayoutAnimation>
+			<Move RelativeTo="PositionChange" X="1" Duration="0.2" Easing="BounceIn" />
+		</LayoutAnimation>
+	</Rectangle>
+
+	<Grid Rows="10*,90*">
+		<Grid Columns="1*,1*,1*">
+			<Panel Color="#AA7941" ux:Name="menu1">
+				<Clicked>
+					<Set pc.Active="pc1" />
+				</Clicked>
+				<Text Value="Menu1" FontSize="25" Alignment="Center" Color="White" />
+			</Panel>
+			<Panel Color="#FF9200" ux:Name="menu2">
+				<Clicked>
+					<Set pc.Active="pc2" />
+					<Set rect.LayoutMaster="menu2" />
+				</Clicked>
+				<Text Value="Menu2" FontSize="25" Alignment="Center" Color="White" />
+			</Panel>
+			<Panel Color="#0432FF" ux:Name="menu3">
+				<Clicked>
+					<Set pc.Active="pc3" />
+					<Set rect.LayoutMaster="menu3" />
+				</Clicked>
+				<Text Value="Menu3" FontSize="25" Alignment="Center" Color="White" />
+			</Panel>
+		</Grid>
+		<PageControl ux:Name="pc" Active="pc1">
+			<Page Color="#AA7941AA" ux:Name="pc1">
+				<WhileActive Threshold="0.5">
+					<Set rect.LayoutMaster="menu1" />
+				</WhileActive>
+
+				<Text Value="Page1" FontSize="35" Alignment="Center" Color="White" />
+
+				<EnteringAnimation>
+					<Scale Factor="0.6" />
+					<Rotate Degrees="45" />
+				</EnteringAnimation>	
+			</Page>
+			<Page Color="#FF9200AA" ux:Name="pc2">
+				<WhileActive Threshold="0.5">
+					<Set rect.LayoutMaster="menu2" />
+				</WhileActive>
+
+				<Text Value="Page2" FontSize="35" Alignment="Center" Color="White" />
+
+				<EnteringAnimation>
+					<Scale Factor="0.6" />
+					<Rotate Degrees="45" />
+				</EnteringAnimation>
+
+				<ExitingAnimation>
+					<Scale Factor="0.6" />
+					<Rotate Degrees="-45" />
+				</ExitingAnimation>
+			</Page>
+			<Page Color="#0432FFAA" ux:Name="pc3">
+				<WhileActive Threshold="0.5">
+					<Set rect.LayoutMaster="menu3" />
+				</WhileActive>
+
+				<Text Value="Page3" FontSize="35" Alignment="Center" Color="White" />
+
+				<ExitingAnimation>
+					<Scale Factor="0.6" />
+					<Rotate Degrees="-45" />
+				</ExitingAnimation>
+			</Page>
+		</PageControl>
+	</Grid>
+</Panel>

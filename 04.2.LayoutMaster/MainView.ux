@@ -1,0 +1,10 @@
+<App>
+	<!-- 01. Layout Master -->
+<!-- 
+	<MyLayoutMaster />
+ -->
+	<!-- 02. Page Control with Tab bars -->
+
+	<MyPageControl />
+	
+</App>

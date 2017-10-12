@@ -1,0 +1,38 @@
+<Panel ux:Class="MyLayoutMaster">
+	<Rectangle ux:Name="rect" LayoutMaster="lay2">
+		<Stroke Width="3" Color="Black" />
+
+		<LayoutAnimation>
+			<Move RelativeTo="PositionChange" X="1" Y="1" Duration="0.2" Easing="BackIn" />
+			<Scale RelativeTo="SizeChange" X="1" Y="1" Duration="0.2" Easing="BackOut" />
+		</LayoutAnimation>
+
+	</Rectangle>
+
+	<StackPanel Orientation="Vertical" ItemSpacing="10" Alignment="Center">
+		<StackPanel Orientation="Horizontal" ItemSpacing="10">
+			<Rectangle Width="100" Height="50" Color="Red" ux:Name="lay1">
+					<Clicked>
+						<Set rect.LayoutMaster="lay1" />
+					</Clicked>
+			</Rectangle>
+			<Rectangle Width="150" Height="50" Color="Yellow" ux:Name="lay2">
+					<Clicked>
+						<Set rect.LayoutMaster="lay2" />
+					</Clicked>
+			</Rectangle>
+		</StackPanel>
+		<StackPanel Orientation="Horizontal" ItemSpacing="10">
+			<Rectangle Width="100" Height="50" Color="Blue" ux:Name="lay3">
+					<Clicked>
+						<Set rect.LayoutMaster="lay3" />
+					</Clicked>
+			</Rectangle>
+			<Rectangle Width="50" Height="50" Color="Green" ux:Name="lay4">
+					<Clicked>
+						<Set rect.LayoutMaster="lay4" />
+					</Clicked>
+			</Rectangle>
+		</StackPanel>
+	</StackPanel>
+</Panel>
